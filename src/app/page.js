@@ -2,6 +2,7 @@
 import { getChartData, getCoinData } from "@/utils/api";
 import "apexcharts/dist/apexcharts.css";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 // import ReactApexChart from "react-apexcharts";
 import Image from "next/image";
 import img from "../../public/assets/7152289.jpg";
