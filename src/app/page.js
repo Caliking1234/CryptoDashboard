@@ -2,10 +2,13 @@
 import { getChartData, getCoinData } from "@/utils/api";
 import "apexcharts/dist/apexcharts.css";
 import { useEffect, useState } from "react";
-import ReactApexChart from "react-apexcharts";
+// import ReactApexChart from "react-apexcharts";
 import Image from "next/image";
 import img from "../../public/assets/7152289.jpg";
 export default function Home() {
+  const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+    ssr: false, // Prevents server-side rendering
+  });
   const [coin, setCoin] = useState("bitcoin");
   const [currency, setCurrency] = useState("inr");
   const [MarketCap24hr, setMarketCap24hr] = useState("");
